@@ -1,24 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import { useState } from "react";
+import { AppProvider } from './utils/context';
+import Layout from './pages/layout';
+import NotFound from './pages/not-found';
+import Main from './pages/main';
+import News from './pages/news';
+import NewsDetails from './pages/newsDetails';
+import Weather from './pages/weather';
+
 
 function App() {
+  const [theme, setTheme] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppProvider>
+      <div className={`App ${theme}`} >
+        <Routes>
+          <Route path="/" element={<Layout theme={theme} setTheme={setTheme} />}>
+            <Route  index element={<Main />}/>
+            <Route  path='news' element={<News />}/>
+            <Route  path='weather' element={<Weather />}/>
+            <Route  path='*' element={<NotFound />}/>
+            <Route  path='/news/:title' element={<NewsDetails />}/>
+          </Route>
+        </Routes>
+      </div>
+    </AppProvider>
+    
   );
 }
 

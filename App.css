@@ -1,0 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.App {
+  text-align: center;
+  /* background-color: rgb(59, 60, 60); */
+}
+.dark-theme {
+  background-color: black;
+  color: aliceblue;
+}
