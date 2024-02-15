@@ -4,7 +4,6 @@ import { useState } from "react";
 import { AppProvider } from './utils/context';
 import Layout from './pages/layout';
 import NotFound from './pages/not-found';
-import Main from './pages/main';
 import News from './pages/news';
 import NewsDetails from './pages/newsDetails';
 import Weather from './pages/weather';
@@ -18,7 +17,6 @@ function App() {
       <div className={`App ${theme}`} >
         <Routes>
           <Route path="/" element={<Layout theme={theme} setTheme={setTheme} />}>
-            <Route  index element={<Main />}/>
             <Route  path='news' element={<News />}/>
             <Route  path='weather' element={<Weather />}/>
             <Route  path='*' element={<NotFound />}/>

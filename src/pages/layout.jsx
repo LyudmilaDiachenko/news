@@ -6,7 +6,7 @@ import iconGitHub from "../assets/icon-github.png"
 export default function Layout(props) {
   return (
     <div>
-        {props.theme ? <link rel="stylesheet" type="text/css" href={`/my_use_effect/themes/${props.theme}.css`}></link> : null}
+        {props.theme ? <link rel="stylesheet" type="text/css" href={`/news/themes/${props.theme}.css`}></link> : null}
         <Header setTheme={props.setTheme} />
         <Outlet />
         <footer>
