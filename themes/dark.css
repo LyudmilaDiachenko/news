@@ -1,0 +1,38 @@
+.dark{
+    background-color: #333;
+}
+
+.dark,
+.dark .logo_container, 
+.forecast_container h2,
+.hour_container h2,
+footer,
+a {
+    color: #f9f9ff;
+}
+
+.weatherFormInput{
+    background-color: #333;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #f9f9ff;
+    color: #f9f9ff;
+}
+
+.weatherFormInput::placeholder{
+    color: white;
+}
+
+.news_input_search{
+    background-color: #333;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #f9f9ff;
+    color: #f9f9ff;
+}
+
+.news_input_search::placeholder{
+    color: #f9f9ff;
+}
